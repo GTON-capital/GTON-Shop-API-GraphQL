@@ -12,7 +12,7 @@ COPY internal /app/internal
 COPY tools /app/tools
 COPY Makefile /app
 
-RUN make
+RUN make -C /app
 
 RUN cp doc/config.example.json /app/config.json
 
