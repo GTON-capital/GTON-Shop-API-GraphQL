@@ -21,4 +21,4 @@ services:
       - 7373:7373
     depends_on:
       - 'db'
-    command: '/app/build/artionapi -cfg /app/config.json'
+    command: ['/app/build/artionapi', '-cfg', '/app/config.json']
