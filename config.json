@@ -9,7 +9,7 @@
     "level": "Info"
   },
   "node": {
-    "url": "/var/opera/mainnet/opera.ipc"
+    "url": "https://rpc.gton.network/"
   },
   "db": {
     "url": "mongodb://db:27017",

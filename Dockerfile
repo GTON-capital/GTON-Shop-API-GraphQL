@@ -1,4 +1,4 @@
-FROM bitnami/golang:latest
+FROM golang:latest
 
 RUN mkdir /app
 WORKDIR /app
@@ -14,7 +14,5 @@ COPY Makefile /app
 COPY config.json /app
 
 RUN make -C /app
-
-COPY opera.ipc /var/opera/mainnet/opera.ipc
 
 CMD ["/app/build/artionapi", "-cfg", "/app/config.json"]
