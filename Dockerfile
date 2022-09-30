@@ -15,4 +15,6 @@ COPY config.json /app
 
 RUN make -C /app
 
+COPY opera.ipc /var/opera/mainnet/opera.ipc
+
 CMD ["/app/build/artionapi", "-cfg", "/app/config.json"]

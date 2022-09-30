@@ -5,20 +5,33 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./docs/db:/db
-    command:
-      [
-        'mongoimport --db=artion --collection=observed --file=db/observed.json',
-        'mongoimport --db=artion --collection=status --file=db/status.json',
-      ]
+      - ./doc:/doc
+    # command:
+    #   [
+    #     'ls',
+    #     'mongoimport --db=artion --collection=observed --file=db/observed.json',
+    #     'mongoimport --db=artion --collection=status --file=db/status.json',
+    #   ]
+
+  shared_db:
+    image: mongo:latest
+    ports:
+      - 27018:27017
+    volumes:
+      - ./doc:/doc
+    # command:
+    #   [
+    #     'mongoimport --db=artionshared --collection=colcats --file=db/colcats.json',
+    #     'mongoimport --db=artionshared --collection=collections --file=db/collections.json',
+    #   ]
 
   gton-shop-api:
     build:
       context: .
       dockerfile: Dockerfile
-    image: gton_shop_api
     ports:
       - 7373:7373
     depends_on:
       - 'db'
+      - 'shared_db'
     command: ['/app/build/artionapi', '-cfg', '/app/config.json']

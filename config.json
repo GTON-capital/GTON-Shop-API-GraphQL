@@ -16,7 +16,7 @@
     "db": "artion"
   },
   "shared_db": {
-    "url": "mongodb://127.0.0.1:27017",
+    "url": "mongodb://shared_db:27018",
     "db": "artion_shared"
   },
   "ipfs": {
@@ -33,7 +33,7 @@
   "notification": {
     "sendgrid": {
       "domain": "https://api.sendgrid.com",
-      "key": "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"
+      "key": "sendgrid-api-key"
     }
   }
 }
