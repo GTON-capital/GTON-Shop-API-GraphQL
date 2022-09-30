@@ -16,7 +16,7 @@
     "db": "artion"
   },
   "shared_db": {
-    "url": "mongodb://shared_db:27018",
+    "url": "mongodb://shared_db:27017",
     "db": "artion_shared"
   },
   "ipfs": {
