@@ -3,13 +3,14 @@ package auth
 import (
 	"artion-api-graphql/internal/config"
 	"fmt"
+	"strings"
+
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"strings"
 )
 
 // challengePrefix is template of message to be signed using Metamask.
-const challengePrefix = "Click \"Sign\" to sign in into Artion.\n\nNonce:"
+const challengePrefix = "Click \"Sign\" to sign in into GTON Sho.\n\nNonce:"
 const challengePrefixLen = len(challengePrefix)
 
 var instance *Authenticator
