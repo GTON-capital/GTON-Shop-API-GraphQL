@@ -11,8 +11,9 @@ COPY doc /app/doc
 COPY internal /app/internal
 COPY tools /app/tools
 COPY Makefile /app
-COPY config.json /app
 
 RUN make -C /app
+
+COPY config.json /app
 
 CMD ["/app/build/artionapi", "-cfg", "/app/config.json"]
