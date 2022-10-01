@@ -9,7 +9,7 @@
     "level": "Info"
   },
   "node": {
-    "url": "https://rpc.gton.network/"
+    "url": "wss://rpc.gton.network/socket"
   },
   "db": {
     "url": "mongodb://db:27017",
@@ -24,7 +24,7 @@
     "gateway": "https://artion.mypinata.cloud",
     "gateway_bearer": "xyz.abc.def",
     "skip_http_gateways": true,
-    "file_cache_dir": "/tmp/artion/"
+    "file_cache_dir": "/tmp/gton-shop/"
   },
   "auth": {
     "bearer_secret": "0x0123456789",
