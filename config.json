@@ -21,7 +21,7 @@
   },
   "ipfs": {
     "url": "localhost:5001",
-    "gateway": "https://artion.mypinata.cloud",
+    "gateway": "https://moccasin-secondary-hippopotamus-761.mypinata.cloud",
     "gateway_bearer": "xyz.abc.def",
     "skip_http_gateways": true,
     "file_cache_dir": "/tmp/gton-shop/"
