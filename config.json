@@ -17,7 +17,7 @@
   },
   "shared_db": {
     "url": "mongodb://shared_db:27017",
-    "db": "artion_shared"
+    "db": "artionshared"
   },
   "ipfs": {
     "url": "localhost:5001",
