@@ -10,7 +10,7 @@ import (
 )
 
 // challengePrefix is template of message to be signed using Metamask.
-const challengePrefix = "Click \"Sign\" to sign in into GTON Sho.\n\nNonce:"
+const challengePrefix = "Click \"Sign\" to sign in into GTON Shop.\n\nNonce:"
 const challengePrefixLen = len(challengePrefix)
 
 var instance *Authenticator
