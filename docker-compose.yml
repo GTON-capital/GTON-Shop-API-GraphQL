@@ -16,6 +16,7 @@ services:
     command: >
       bash -c "mongoimport --host=db --port=27017 --db=artion --collection=observed --file=doc/db/observed.json 
       && mongoimport --host=db --port=27017 --db=artion --collection=status --file=doc/db/status.json
+      && mongoimport --host=db --port=27017 --db=artion --collection=notification_tpl --file=doc/db/notification_tpl.json
       && mongoimport --host=shared_db --port=27017 --db=artionshared --collection=colcats --file=doc/db/colcats.json 
       && mongoimport --host=shared_db --port=27017 --db=artionshared --collection=collections --file=doc/db/collections.json"
 
