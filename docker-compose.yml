@@ -2,9 +2,13 @@ version: '3.7'
 services:
   db:
     image: mongo:latest
+    volumes:
+      - ./home/root/data:/data/db
 
   shared_db:
     image: mongo:latest
+    volumes:
+      - ./home/root/data:/data/db
 
   db_import:
     image: mongo:latest
