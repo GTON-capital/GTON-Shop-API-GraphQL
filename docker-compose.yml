@@ -3,12 +3,12 @@ services:
   db:
     image: mongo:latest
     volumes:
-      - ./home/root/data:/data/db
+      - /home/root/data:/data/db
 
   shared_db:
     image: mongo:latest
     volumes:
-      - ./home/root/data:/data/db
+      - /home/root/data:/data/db
 
   db_import:
     image: mongo:latest
