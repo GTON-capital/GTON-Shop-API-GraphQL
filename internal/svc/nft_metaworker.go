@@ -160,9 +160,9 @@ func (mwt *nftMetadataWorkerThread) update(tok *types.Token) {
 
 	updateTokenCategoriesFromCollection(tok)
 
-	if tok.Royalty == nil {
-		updateTokenRoyalty(tok)
-	}
+	// if tok.Royalty == nil {
+	// 	updateTokenRoyalty(tok)
+	// }
 
 	// does this token make a sense?
 	tok.IsActive = tok.Name != "" || tok.Description != "" || tok.ImageURI != ""
