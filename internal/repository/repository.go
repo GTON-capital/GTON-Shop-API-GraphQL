@@ -172,11 +172,7 @@ func (p *Proxy) Close() {
 func (p *Proxy) registerContracts() {
 	var contractTypes = []string{
 		"auction", 
-		"auction2", 
-		"auction3", 
 		"market", 
-		"market2", 
-		"market3", 
 		"rng", 
 		"token_registry", 
 		// "royalty_registry"
