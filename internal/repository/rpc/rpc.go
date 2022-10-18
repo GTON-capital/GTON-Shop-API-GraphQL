@@ -146,11 +146,11 @@ func (o *Opera) RegisterContract(ct string, addr *common.Address) (err error) {
 			log.Noticef("loaded %s contract at %s", ct, addr.String())
 		}
 
-	case "royalty_registry":
-		o.royaltyRegistryContract, err = contracts.NewFantomRoyaltyRegistry(*addr, o.ftm)
-		if err == nil {
-			log.Noticef("loaded %s contract at %s", ct, addr.String())
-		}
+	// case "royalty_registry":
+	// 	o.royaltyRegistryContract, err = contracts.NewFantomRoyaltyRegistry(*addr, o.ftm)
+	// 	if err == nil {
+	// 		log.Noticef("loaded %s contract at %s", ct, addr.String())
+	// 	}
 
 	default:
 		err = fmt.Errorf("unknown contract type %s", ct)
