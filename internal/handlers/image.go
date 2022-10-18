@@ -5,10 +5,11 @@ import (
 	"artion-api-graphql/internal/repository"
 	"errors"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
 	"net/http"
 	"strings"
+
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
 // ImageHandler builds a HTTP handler function for Token images.
@@ -119,7 +120,10 @@ func CollectionImageResolver(path string) (imageUri string, err error) {
 	if err != nil {
 		return "", fmt.Errorf("unable to find collection in db; %s", err)
 	}
-	if collection == nil || collection.Image == "" {
+	if collection == nil  {
+		return "", fmt.Errorf("collection is nil;")	
+	}
+	if collection.Image == "" {
 		return "", fmt.Errorf("collection has no image; %s", err)
 	}
 	return "/ipfs/" + collection.Image, nil
