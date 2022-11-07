@@ -22,5 +22,5 @@ db.accounts.createIndex({ alias: 'text', address: 'text' });
 - artion
 
 ```javascript
-db.tokens.setIndexes({ name: 'text', desc: 'text' });
+db.tokens.createIndex({ name: 'text', desc: 'text' });
 ```
