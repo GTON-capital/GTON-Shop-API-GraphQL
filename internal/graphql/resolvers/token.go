@@ -7,12 +7,13 @@ import (
 	"artion-api-graphql/internal/types/sorting"
 	"context"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
 	"math/big"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
 // Token object is constructed from query, data from db are loaded on demand into "dbToken" field.
@@ -90,7 +91,7 @@ func (t *Token) Image() *string {
 		return nil
 	}
 	if strings.HasPrefix(t.ImageURI, "ipfs://") {
-		uri := "https://artion.mypinata.cloud/ipfs/" + t.ImageURI[7:]
+		uri := "https://moccasin-secondary-hippopotamus-761.mypinata.cloud/ipfs/" + t.ImageURI[7:]
 		return &uri
 	}
 	return &t.ImageURI

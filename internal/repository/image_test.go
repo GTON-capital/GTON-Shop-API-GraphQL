@@ -4,8 +4,9 @@ import (
 	"artion-api-graphql/internal/config"
 	"artion-api-graphql/internal/logger"
 	"artion-api-graphql/internal/types"
-	"github.com/onsi/gomega"
 	"testing"
+
+	"github.com/onsi/gomega"
 )
 
 func initRepoForTest() {
@@ -22,7 +23,7 @@ func TestVideoThumbnail(t *testing.T) {
 	g := gomega.NewGomegaWithT(t)
 
 	initRepoForTest()
-	image, err := R().GetImage("https://artion.mypinata.cloud/ipfs/QmePhQPfwwCWzqSTpxa2CQFCWLbDwj2PATdL6AFYRw7nFc")
+	image, err := R().GetImage("https://moccasin-secondary-hippopotamus-761.mypinata.cloud/ipfs/QmePhQPfwwCWzqSTpxa2CQFCWLbDwj2PATdL6AFYRw7nFc")
 	g.Expect(image.Type).To(gomega.Equal(types.ImageTypeMp4))
 	thumb, err := createThumbnail(*image)
 	g.Expect(err).To(gomega.BeNil())
@@ -37,7 +38,7 @@ func TestJpgThumbnail(t *testing.T) {
 	g := gomega.NewGomegaWithT(t)
 
 	initRepoForTest()
-	image, err := R().GetImage("https://artion.mypinata.cloud/ipfs/QmbcqNsWpQuE56xVKQ226rDM29KM7UegmueqMeXPpq5qwo/140.png")
+	image, err := R().GetImage("https://moccasin-secondary-hippopotamus-761.mypinata.cloud/ipfs/QmbcqNsWpQuE56xVKQ226rDM29KM7UegmueqMeXPpq5qwo/140.png")
 	g.Expect(image.Type).To(gomega.Equal(types.ImageTypePng))
 	thumb, err := createThumbnail(*image)
 	g.Expect(err).To(gomega.BeNil())
