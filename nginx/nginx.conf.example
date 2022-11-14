@@ -1,0 +1,45 @@
+server {
+  listen 80;
+  server_name gton.shop;
+
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl;
+
+  server_name gton.shop;
+
+  ssl_certificate      /etc/letsencrypt/live/gton.shop/fullchain.pem;
+  ssl_certificate_key  /etc/letsencrypt/live/gton.shop/privkey.pem;
+
+  location / {
+    proxy_pass   http://localhost:8080/;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  location /graphql {
+    proxy_pass   http://localhost:7373/graphql;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+    
+  location /upload-image {
+    proxy_pass   http://localhost:7373/upload-image;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  location /images {
+    proxy_pass   http://localhost:7373/images;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  location /api {
+    proxy_pass   http://localhost:7373/api;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  location /metadata {
+    proxy_pass   http://localhost:7373/metadata;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
