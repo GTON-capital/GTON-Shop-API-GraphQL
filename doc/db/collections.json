@@ -4,9 +4,9 @@
   "categories": [""],
   "collectionName": "Default GTON Shop Collection",
   "description": "Default GTON Shop collection",
-  "discord": "",
+  "discord": "https://discord.gg/XeN45BqX",
   "email": "info@gton.capital",
-  "erc721Address": "0xBF29277AdD1E4f142D37F46eFc02Fc1d8beB7897",
+  "erc721Address": "0xee830A2241F632171e2EA2778c96583FA760AAAe",
   "feeRecipient": "0x50DF0af8a06f82fCcB0aCb77D8c986785b36d734",
   "isAppropriate": true,
   "isInternal": true,
@@ -18,6 +18,6 @@
   "royalty": 0,
   "siteUrl": "https://gton.shop",
   "status": true,
-  "telegram": "",
-  "twitterHandle": ""
+  "telegram": "GTON_Capital_official",
+  "twitterHandle": "GtonCapital"
 }
