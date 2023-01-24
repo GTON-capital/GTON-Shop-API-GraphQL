@@ -4,9 +4,10 @@ import (
 	"artion-api-graphql/internal/types"
 	"bytes"
 	"fmt"
+	"math/big"
+
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"math/big"
 )
 
 // tokenPriceDecimalsCorrection represents the value used to reduce 1 token price to stored fixed 6 decimals - 10^12.
@@ -14,7 +15,7 @@ import (
 var tokenPriceDecimalsCorrection = big.NewInt(1_000_000_000_000)
 
 var zeroAddress = common.Address{}
-var wGCDAddress = common.HexToAddress("0xeFF66B4A84C8a6b69b99EB1C5e39aF8fc35d13db")
+var wGCDAddress = common.HexToAddress("0x4200000000000000000000000000000000000006")
 
 // GetUnifiedPrice converts token price in pay-tokens to value in unified units for storing in database.
 func (p *Proxy) GetUnifiedPrice(address common.Address, amount hexutil.Big) (out types.TokenPrice, err error) {
