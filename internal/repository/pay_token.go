@@ -67,7 +67,7 @@ func (p *Proxy) ListPayTokens() ([]types.PayToken, error) {
 
 func (p *Proxy) getPayToken(address *common.Address) (*types.PayToken, error) {
 	list, err := p.ListPayTokens() // cached
-	log.Printf("pay tokens => %v -> %s", list, address)
+	log.Infof("pay tokens => %v -> %s", list, address)
 	if err != nil {
 		return nil, err
 	}
